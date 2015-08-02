@@ -1,13 +1,19 @@
+# Distributed Study Group on Distributed Systems
+## TLDR:
+You have a directed graph of sources and sinks. Sources emit streams of events that they send to sinks. For every source, each of its sinks must observe the source's stream in the same order in which the source generates the events. Build different implementations of a service satisfying this requirement. Simple Rails -> Rails with system design optimizations -> simple Scala -> Scala with optimizations. Create a re-usable set of tools for profiling performance, stress and integration testing. Compare performance across all implementations. 
+
+## What this is:
 A loose exploration of various concepts and tools in distributed systems by following Twitter's path from its creation with Ruby on Rails to its present custom stack built in-house for Scala. 
 
 All the tools and practices currently employed in distributed systems exist as solutions to particular problems. Rather than picking up a hammer and looking for problems for which a hammer might be useful, better to start with an end goal in mind, build towards it, encounter problems, and let those problems that have naturally occurred motivate your search for a solution. Whenever we encounter a problem or want an abstraction, we will attempt to make our own (within reason, we will (probably) not be making our own databases). 
 
 Some concepts to explore:
   + What are the important pitfalls and bottle-necks in scaling a service to greater load and better performance?
-  + What are the some natural solutions to the problems encountered? What other solutions have been adopted by the community?
+  + What are the some natural solutions to the problems encountered that we can build ourselves? What other solutions have been adopted by the community?
   + Trade-offs in different datastores (CAP theorem + performance); performance improvement from different caching strategies, combination of datastores, load-balancing, etc. 
   + To what extent can we achieve performance improvements by changing system design while keeping language constant? 
   + To what extent can we achieve performance improvements by changing language/virtual machine while keeping system design constant? ("Moving to the JVM" is heard a lot - what payoff does the maturity and optimization of the JVM provide?)
+  + How can nodes in our system perform service discovery?
 
 ===============
 
