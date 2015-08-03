@@ -47,21 +47,21 @@ In words:
 ## API
 We will start with a simple client program which makes requests against Twitter's API. The goal in this initial exercise is to identify a subset of Twitter's API that which all of our implementations will support. Details for this first step live in `/synthetic_twitter_feed`.
 
-3) Simple Rails implementation:
+Simple Rails implementation:
   + Using as little additional configuration beyond the Rails defaults
   + Develop concrete API that will be used in all subsequent tasks
   + Develop library (scala or ruby) for semantic integration testing and performance profiling
   + Profile initial rails implementation
 
-4) Optimize Rails implementation
+Optimized Rails implementation
   + Given info from integration and stress testing, identify bottle-necks in service and optimize
   + How much performance improvement is there in improving system design while keeping language constant?
 
-5) Simple Scala implementation: 
+Simple Scala implementation: 
   + Again, using as little additional configuration beyond the Play(?) defaults
   + Profile - identify bottlenecks and failure points
 
-6) Optimized Scala implementation:
+Optimized Scala implementation:
   + Given info from (5), change design as needed to improve performance
   + Profile: what sort of payoff from design changes vs change in language
 
