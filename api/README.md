@@ -1,1 +1,1 @@
-Specify the public API for every Twitter implementation. 
+Specifies the public API for every Twitter implementation. 
