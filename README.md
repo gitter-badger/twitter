@@ -10,7 +10,8 @@ All the tools and practices currently employed in distributed systems exist as s
 Some concepts to explore:
   + What are the important pitfalls and bottle-necks in scaling a service to greater load and better performance?
   + What are the some natural solutions to the problems encountered that we can build ourselves? What other solutions have been adopted by the community?
-  + How can nodes in our system perform service discovery?
+  + What are available options for deploying our services? (we'll explore both AWS and Heroku's options)
+  + What cluster management strategies will we employ?
   + Trade-offs in different datastores (CAP theorem + performance); performance improvement from different caching strategies, combination of datastores, load-balancing, etc. 
   + To what extent can we achieve performance improvements by changing system design while keeping language constant? 
   + To what extent can we achieve performance improvements by changing language/virtual machine while keeping system design constant? ("Moving to the JVM" is heard a lot - what payoff does the maturity and optimization of the JVM provide?)
