@@ -5,7 +5,7 @@ We have a directed graph of sources and sinks. Sources emit streams of events th
 ## What this is:
 A loose exploration of various concepts and tools in distributed systems by following Twitter's path from its creation with Ruby on Rails to its present custom stack built in-house for Scala. 
 
-All the tools and practices currently employed in distributed systems exist as solutions to particular problems. Rather than picking up a hammer and looking for problems for which a hammer might be useful, better to start with an end goal in mind, build towards it, encounter problems, and let those problems that have naturally occurred motivate your search for a solution. Whenever we encounter a problem or want an abstraction, we will attempt to make our own (within reason, we will (probably) not be making our own databases). 
+All the tools and practices currently employed in distributed systems exist as solutions to particular problems. Rather than picking up a hammer and looking for problems for which a hammer might be suited, better to start with an end goal in mind, build towards it, encounter problems, and let those problems that have naturally occurred motivate your search for a solution. Whenever we encounter a problem or want an abstraction, we will attempt to make our own (within reason, we will (probably) not be making our own databases). 
 
 Some concepts to explore:
   + What are the important pitfalls and bottle-necks in scaling a service to greater load and better performance?
