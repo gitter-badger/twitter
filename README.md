@@ -37,7 +37,7 @@ x.eventStreams.forAll(consistentWithSourceStream)
 In words: 
   + Sources emit events in some sequence which they broadcast to sinks
   + In a correct Twitter implementation, for every source it must be the case that all of its sinks see the stream emitted by the source in the same sequence with which the source generates the stream.
-  + In addition to all nodes receiving a stream consistent with a source's generated stream -- for every subset of `Twitter.nodeSet` such that `subset.map(_.sources).reduce(_ intersect _).isNonEmpty`, all nodes in the subset must agree on the ordering of the stream formed by merging the output streams of all their shared sources. 
+  + In addition to all nodes receiving a stream consistent with a source's generated stream -- for every element of `Twitter.nodeSet.subsets` such that `subset.map(_.sources).reduce(_ intersect _).isNonEmpty`, all nodes in the subset must agree on the ordering of the stream formed by merging the output streams of all their shared sources. 
   + We will profile the performance of every Twitter implementation, seeing in which conditions our service will fail
 
 2) Concrete specification of the API:
