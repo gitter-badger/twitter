@@ -1,8 +1,8 @@
 # Distributed Study Group on Distributed Systems
-## TLDR:
+## TLDR
 We have a directed graph of sources and sinks. Sources emit streams of events that they send to sinks. For every source, each of its sinks must observe the source's stream in the same order in which the source generates the events. We'll build different implementations of a service satisfying this requirement. Our implementations will start with a simple Rails implementation -> Rails with system design optimizations -> simple Scala -> Scala with optimizations. We'll create a re-usable set of tools for profiling performance, stress and integration testing, comparing performance and failure points across all implementations.
 
-## What this is:
+## What this is
 A loose exploration of various concepts and tools in distributed systems by following Twitter's path from its creation with Ruby on Rails to its present custom stack built in-house for Scala. 
 
 All the tools and practices currently employed in distributed systems exist as solutions to particular problems. Rather than picking up a hammer and looking for problems for which a hammer might be suited, better to start with an end goal in mind, build towards it, encounter problems, and let those problems that have naturally occurred motivate your search for a solution. Whenever we encounter a problem or want an abstraction, we will attempt to make our own (within reason, we will (probably) not be making our own databases). 
@@ -44,7 +44,7 @@ In words:
   + In addition to all nodes receiving a stream consistent with a source's generated stream -- for every element of `Twitter.nodeSet.subsets` such that `subset.map(_.sources).reduce(_ intersect _).isNonEmpty`, all nodes in the subset must agree on the ordering of the stream formed by merging the output streams of all their shared sources. 
   + We will profile the performance of every Twitter implementation, seeing in which conditions our service will fail
 
-## Concrete specification of the API:
+## API
 We will start with a simple client program which makes requests against Twitter's API. The goal in this initial exercise is to identify a subset of Twitter's API that which all of our implementations will support. Details for this first step live in `/synthetic_twitter_feed`.
 
 3) Simple Rails implementation:
