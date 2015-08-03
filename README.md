@@ -1,6 +1,6 @@
 # Distributed Study Group on Distributed Systems
 ## TLDR:
-You have a directed graph of sources and sinks. Sources emit streams of events that they send to sinks. For every source, each of its sinks must observe the source's stream in the same order in which the source generates the events. Build different implementations of a service satisfying this requirement. Simple Rails -> Rails with system design optimizations -> simple Scala -> Scala with optimizations. Create a re-usable set of tools for profiling performance, stress and integration testing. Compare performance across all implementations. 
+We have a directed graph of sources and sinks. Sources emit streams of events that they send to sinks. For every source, each of its sinks must observe the source's stream in the same order in which the source generates the events. We'll build different implementations of a service satisfying this requirement. Our implementations will start with a simple Rails implementation -> Rails with system design optimizations -> simple Scala -> Scala with optimizations. We'll create a re-usable set of tools for profiling performance, stress and integration testing, comparing performance and failure points across all implementations.
 
 ## What this is:
 A loose exploration of various concepts and tools in distributed systems by following Twitter's path from its creation with Ruby on Rails to its present custom stack built in-house for Scala. 
