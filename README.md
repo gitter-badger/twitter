@@ -70,7 +70,7 @@ Optimized Scala implementation:
 2. Stress test initial implementation, profile failures
 3. Optimize system design based on findings from (2)
 4. Profile failures of the optimized Rails app
-6. Build Scala service (changing architecture as well)
+6. Build Scala service (streaming API, not request/response based)
 7. Profile and compare the three different implementations
 
 
