@@ -44,11 +44,6 @@ In words:
   + In addition to all nodes receiving a stream consistent with a source's generated stream -- for every element of `Twitter.nodeSet.subsets` such that `subset.map(_.sources).reduce(_ intersect _).isNonEmpty`, all nodes in the subset must agree on the ordering of the stream formed by merging the output streams of all their shared sources. 
   + We will profile the performance of every Twitter implementation, seeing in which conditions our services fail
 
-## Exploring Twitter's API
-We will start with a simple client program which makes requests against Twitter's API. The goal in this initial exercise is to identify a subset of Twitter's API that which all of our implementations will support. Details for this first step live in `/synthetic_twitter_feed`.
-
-## Implementing Twitter's API - performance, integration, and stress testing
-After we are familiar with some features of Twitter's API, and have decided on a common API for our implementaitons, we'll start actually building some example systems. We'll start with a simple Rails implementation, client-server model, structured around clients polling a RESTful server API for updates. In tandem, we'll build reusable tools for profiling performance, stress, and integration testing. The testing tools will *only* be hitting the public API and should implementation agnostic. I'll be building those tools out in Scala, but you can build yours in whatever language you like; the concepts are completely transferrable.
 
 Simple Rails implementation:
   + Using as little additional configuration beyond the Rails defaults
@@ -70,6 +65,12 @@ Optimized Scala implementation:
 
 =============
 
-
+## Road Map
+1. Implement minimal Rails service (request/response based with REST)
+2. Stress test initial implementation, profile failures
+3. Optimize system design based on findings from (2)
+4. Profile failures of the optimized Rails app
+6. Build Scala service (changing architecture as well)
+7. Profile and compare the three different implementations
 
 
