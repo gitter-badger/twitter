@@ -1,5 +1,7 @@
 # Distributed Study Group on Distributed Systems
 ## TLDR
+
+[![Join the chat at https://gitter.im/d-babiak/twitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/d-babiak/twitter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 We have a directed graph of sources and sinks. Sources emit streams of events that they send to sinks. For every source, each of its sinks must observe the source's stream in the same order in which the source generates the events. We'll build different implementations of a service satisfying this requirement. Our implementations will start with a simple Rails implementation -> Rails with system design optimizations -> simple Scala -> Scala with optimizations. We'll create a re-usable set of tools for profiling performance, stress and integration testing, comparing performance and failure points across all implementations.
 
 ## What this is
